@@ -7,8 +7,7 @@ import java.util.regex.Pattern;
 public class Runner {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        //String input = sc.nextLine();
-        String input = "toRubles($85.452)";
+        String input = sc.nextLine();
 
         String regex = "^toDollars\\((.+)\\)";
         Pattern patternDol = Pattern.compile(regex);
