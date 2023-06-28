@@ -39,7 +39,7 @@ public class Runner {
                 String expression = matcherRub.group(1);
                 String[] values = expression.split(" ");
                 for (String str : values) {
-                    if (str.matches("^toDollars\\((\\d+(\\.\\d+)?р{1}$)\\)")) {
+                    if (str.matches("^toDollars\\((\\d+(\\.\\d+)?р{1})\\)")) {
                         str = str.replaceAll("[()a-zA-Zр]+", "");
                         sb.append(Calculator.toDollars(Double.parseDouble(str))).append(" ");
                     } else if (str.matches("\\${1}\\d+(\\.\\d+)?")) {
